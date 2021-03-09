@@ -9,7 +9,7 @@ class Ship():
         self.ai_settings = ai_settings
         
         #加载飞船图像并获取其外接矩形
-        self.image = pygame.image.load('images\ship.bmp')
+        self.image = pygame.image.load('image\ship.bmp')
         self.rect = self.image.get_rect()
         
         self.screen_rect = screen.get_rect()
@@ -39,3 +39,9 @@ class Ship():
         if self.moving_left and self.rect.left > 0 :
             self.center -= self.ai_settings.ship_speed_factor
         self.rect.centerx = self.center
+
+
+    def center_ship(self):
+        """让飞船在屏幕上居中"""
+        self.center = self.screen_rect.centerx
+        
