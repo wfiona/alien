@@ -37,11 +37,11 @@ def run_game():
     #开始游戏的主循环
     while True:
         #监视键盘和鼠标的事件
-        fg.check_events(ai_settings,screen,stats,play_button,ship,aliens,bullets)
+        fg.check_events(ai_settings,screen,stats,play_button,ship,sb,aliens,bullets)
         if stats.game_active :
             ship.update()
             fg.update_bullets(ai_settings,screen,stats,sb,ship,aliens,bullets)
-            fg.update_aliens(ai_settings,stats,screen,ship,aliens,bullets)
+            fg.update_aliens(ai_settings,stats,screen,ship,sb,aliens,bullets)
             
         fg.update_screen(ai_settings,screen,stats,sb,ship,aliens,bullets,play_button)
 
